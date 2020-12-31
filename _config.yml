@@ -1,36 +1,47 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Jekyll config file
 
 title: Guid'me Tech Blog
-email: jeremy.pichon@guidme.fr
-description: >- # this means to ignore newlines until "baseurl:"
-  Guid’me is a mobile application which proposes guided tours based on geolocation.
-  This website will contains all Open Source projects and blog posts from Guid'me's Engineers.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://guidme.fr" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  guidme
+logo: /assets/logo.png
 
-# Build settings
+email_contact: contact@guidme.fr
+author:
+  name: Guid'me
+  email: jeremy.pichon@guidme.fr
+
+description: >-
+  Guid’me is French company that helps travelers to enjoy the best of any country with local guides.
+  This website will contains all Open Source projects and blog posts from our Engineers.
+
+url: "https://guidme.fr" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# Theme
 theme: minima
+
+# Minima theme configuration
+minima:
+  # classic, dark, solarized, solarized-dark
+  skin: classic
+  social_links:
+    github: guidme
+    facebook: appguidme
+    instagram: appguidme
+    linkedin: guidme
+    twitter: false
+
+# Reorder the navigation menus
+header_pages:
+  - blog.md
+  - open-source.md
+  - about.md
+
+# Plugins to enable
 plugins:
   - jekyll-feed
+
+# Change to true to show post preview in list
+# See: https://jekyllrb.com/docs/posts/#post-excerpts
+show_excerpts: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
