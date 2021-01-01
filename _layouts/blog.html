@@ -21,38 +21,12 @@ layout: default
     {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
-    <ul class="post-list">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {%- for post in posts -%}
-        <li>
-          {% if post.image %}
-            <img src="{{ post.image }}" style="width: 256px;">
-          {% endif %}
-          <div class="post-meta-container" style="vertical-align: middle; display: inline-block;">
-            <span class="post-meta">
-              <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-                {{ post.date | date: date_format }}
-              </time>
-              {%- if post.author -%}
-                • {% for author in post.author %}
-                  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-                    {%- if forloop.last == false %}, {% endif -%}
-                {% endfor %}
-              {%- endif -%}
-            </span>
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-            {%- if site.show_excerpts -%}
-              {{ post.excerpt }}
-            {%- endif -%}
-          </div>
-        </li>
-        {%- endfor -%}
-    </ul>
+    <div class="row post-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts -%}
+        {% include blogpost-card.html post=post %}
+      {%- endfor -%}
+    </div>
 
     {% if site.paginate %}
       <div class="pager">
