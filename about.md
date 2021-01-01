@@ -4,7 +4,7 @@ title: About Us
 permalink: /about/
 ---
 
-This is the Guid'me's Technical blog, a French company that helps travelers to enjoy the best of any country with local guides.
+This is the Guid'me's Technical blog. We are a French company that helps travelers to enjoy the best of any country with local guides.
 
 You can find out more info about how we are working to improve our products, the problems we are facing and how we solved them.
 

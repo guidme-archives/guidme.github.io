@@ -36,7 +36,7 @@ layout: default
               {%- if post.author -%}
                 • {% for author in post.author %}
                   <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <span class="p-author h-card" itemprop="name">by {{ author }}</span></span>
+                    <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
                     {%- if forloop.last == false %}, {% endif -%}
                 {% endfor %}
               {%- endif -%}
@@ -51,7 +51,7 @@ layout: default
             {%- endif -%}
           </div>
         </li>
-      {%- endfor -%}
+        {%- endfor -%}
     </ul>
 
     {% if site.paginate %}
@@ -71,7 +71,8 @@ layout: default
         </ul>
       </div>
     {%- endif %}
-
+  {%- else -%}
+    <p>No posts yet...</p>
   {%- endif -%}
 
 </div>

@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+ 
+  {% assign posts = site.posts %}
+
+
+  <h2 class="post-list-heading">Latests blogposts</h2>
+  {%- if posts.size > 0 -%}
+    <ul class="post-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts limit:10 -%}
+      <li>
+        {% if post.image %}
+          <img src="{{ post.image }}" style="width: 256px;">
+        {% endif %}
+        <div class="post-meta-container" style="vertical-align: middle; display: inline-block;">
+          <span class="post-meta">
+            <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+              {{ post.date | date: date_format }}
+            </time>
+            {%- if post.author -%}
+              • {% for author in post.author %}
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+                  {%- if forloop.last == false %}, {% endif -%}
+              {% endfor %}
+            {%- endif -%}
+          </span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- else -%}
+    <p>No posts yet...</p>
+  {%- endif -%}
+
+</div>
