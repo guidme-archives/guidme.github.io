@@ -12,7 +12,7 @@ description: >-
   Guid’me is French company that helps travelers to enjoy the best of any country with local guides.
   This website will contains all Open Source projects and blog posts from our Engineers.
 
-url: "https://guidme.fr" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://guidme.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # Theme
@@ -51,14 +51,14 @@ show_excerpts: false
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
