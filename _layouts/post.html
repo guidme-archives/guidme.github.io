@@ -17,13 +17,11 @@ layout: default
           {{ mdate | date: date_format }}
         </time>
       {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
-      {%- endif -%}</p>
+      {% assign author = site.authors | where: 'name', page.author | first %}
+      {% if author %}
+        • <a href="{{ author.url }}">{{ author.name }}</a>
+      {% endif %}
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

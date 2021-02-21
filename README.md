@@ -13,10 +13,5 @@ To run the tech blog in local, run the command `./serve.sh`
 If you want to create a post, please check at the template in `_drafts/template.md`
 
 ## TODOs
-- [ ] Set a proper homepage
 - [ ] Set GitHub to require PRs to merge in master branch
-- [ ] Setup GitHub Page
-- [ ] Setup DNS
-- [ ] Write a first blogpost
-- [ ] Publish first blogpost
 - [ ] Setup the Open Source page

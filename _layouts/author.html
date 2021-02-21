@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div>
+  <h1 style="display: inline-block;">{{ page.name }}</h1>
+  <span style="vertical-align: sub; font-size: 36px;">•</span>
+  <h2 style="display: inline-block;">{{ page.position }}</h2>
+</div>
+
+{{ content }}
+
+<div class="row post-list" style="margin-top: 24px;">
+  {% assign filtered_posts = site.posts | where: 'author', page.name %}
+  {% for post in filtered_posts %}
+    {% include blogpost-card.html post=post %}
+  {% endfor %}
+</div>
