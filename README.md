@@ -12,6 +12,10 @@ To run the tech blog in local, run the command `./serve.sh`
 
 If you want to create a post, please check at the template in `_drafts/template.md`
 
+Note: preview images are found on [undraw.co](https://undraw.co/search).
+
+The color to use is `#56bd97`.
+
 ## TODOs
 - [ ] Set GitHub to require PRs to merge in master branch
 - [ ] Setup the Open Source page

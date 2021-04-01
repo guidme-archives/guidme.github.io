@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Hello World!"
-date:   "2020-02-01"
+date:   "2021-02-01"
 author: "Jeremy Pichon"
-image:  "/assets/2020-02-01-hello-world/preview.webp"
+image:  "/assets/2021-02-01-hello-world/preview.svg"
 ---
 
 <div class="center">
-  <img src="/assets/2020-02-01-hello-world/banner.jpg"
+  <img src="/assets/2021-02-01-hello-world/banner.jpg"
     style="height: 250px; object-fit: contain;"
     alt="Banner of the post"
   />

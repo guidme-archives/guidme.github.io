@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Pay the Tech Debt"
-date:   "2020-03-04"
+date:   "2021-03-04"
 author: "Jeremy Pichon"
-image:  "/assets/2020-03-04-pay-the-tech-debt/preview.jpg"
+image:  "/assets/2021-03-04-pay-the-tech-debt/preview.svg"
 ---
 
 <div class="center">
-  <img src="/assets/2020-03-04-pay-the-tech-debt/banner.jpg"
+  <img src="/assets/2021-03-04-pay-the-tech-debt/preview.svg"
     style="height: 250px; object-fit: contain;"
     alt="Banner of the post"
   />
@@ -29,12 +29,12 @@ Technical debt can be of different types. But most experts agree on two differen
 **Deliberate**
 - It is worth it to deliver the feature in a "quick and dirty" way, even if you have to pay the debt later. It is made consciously and it is planned to be fixed later on.
 
- **Inadvertent** 
+**Inadvertent** 
 - Team is pressured to deliver ASAP and violates best practices to deliver the feature.
 - The team is ignorant of best practices, and makes the codebase difficult to manage. This might happens with junior teams or by using a new language/framework.
 - It happens, even with great programmers. Programming is a learning journey, right?   
 
-### Why is it a problem 
+### Why is it a problem
 
 When the size of the debt grows, your team will spend more time to fix it.  
 Tech debt causes issues that you want to avoid:

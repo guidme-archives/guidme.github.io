@@ -10,8 +10,9 @@
 .card {
   display: inline-block;
   // border: 1px solid black;
-  border-radius: 4px;
+  // border-radius: 4px;
   margin: 8px;
+  margin-bottom: 24px !important;
 
   .card-header {
     max-height: 128px;
@@ -31,6 +32,10 @@
     vertical-align: middle;
     text-align: center;
     margin: 8px;
+
+    h3 .post-link {
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -81,4 +86,8 @@
 
 .center {
   text-align: center;
+}
+
+div.center img {
+  margin-bottom: 24px;
 }
